@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.env
+.vscode/
+runs/
+*.pt
+result_visualization.png
+output_netlist.txt
+train.txt
+val.txt
+data.yaml
