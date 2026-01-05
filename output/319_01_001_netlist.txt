@@ -1,0 +1,56 @@
+Netlist
+=======
+
+Components:
+Comp_0: Class 1 at [1324  678 1425  817]
+Comp_1: Class 29 at [812 823 867 863]
+Comp_2: Class 1 at [837 203 911 268]
+Comp_3: Class 24 at [711 206 742 271]
+Comp_4: Class 24 at [821 688 852 751]
+Comp_5: Class 24 at [1350  160 1418  187]
+Comp_6: Class 1 at [1126  312 1171  384]
+Comp_7: Class 24 at [1432  488 1462  554]
+Comp_8: Class 1 at [1124  182 1172  254]
+Comp_9: Class 24 at [1364  489 1394  554]
+Comp_10: Class 24 at [1342  297 1406  326]
+Comp_11: Class 35 at [558 831 594 864]
+Comp_12: Class 35 at [624 761 663 794]
+Comp_13: Class 2 at [1303  787 1319  814]
+Comp_14: Class 2 at [1146  279 1173  295]
+Comp_15: Class 4 at [769 261 790 278]
+Comp_16: Class 2 at [1359  825 1389  841]
+Comp_17: Class 2 at [ 980  644 1009  661]
+Comp_18: Class 2 at [1430  787 1447  813]
+Comp_19: Class 3 at [744 844 775 857]
+Comp_20: Class 2 at [1146  147 1173  166]
+Comp_21: Class 2 at [711 693 725 717]
+Comp_22: Class 2 at [885 838 901 863]
+Comp_23: Class 2 at [1304  677 1319  702]
+Comp_24: Class 2 at [817 194 841 211]
+Comp_25: Class 2 at [1046  363 1073  380]
+Comp_26: Class 3 at [589 748 618 762]
+Comp_27: Class 2 at [1431  678 1446  702]
+Comp_28: Class 2 at [1046  233 1073  250]
+Comp_29: Class 2 at [696 265 721 280]
+Comp_30: Class 2 at [766 288 794 305]
+Comp_31: Class 3 at [671 698 698 712]
+Comp_32: Class 2 at [926 204 941 227]
+Comp_33: Class 2 at [1341  333 1369  360]
+Comp_34: Class 3 at [604 843 636 858]
+Comp_35: Class 35 at [627 716 659 746]
+Comp_36: Class 3 at [590 698 618 711]
+Comp_37: Class 2 at [1096  361 1116  383]
+Comp_38: Class 35 at [628 693 661 726]
+Comp_39: Class 2 at [1095  230 1114  255]
+Comp_40: Class 2 at [1382  336 1408  362]
+Comp_41: Class 35 at [629 746 659 772]
+Comp_42: Class 2 at [537 839 554 864]
+Comp_43: Class 4 at [1049  337 1071  354]
+Comp_44: Class 4 at [ 985  672 1006  689]
+
+Connections:
+Net_5: Comp_8 -- Comp_28 -- Comp_39
+Net_10: Comp_33 -- Comp_10
+Net_12: Comp_25 -- Comp_37 -- Comp_6
+Net_13: Comp_9 -- Comp_7
+Net_18: Comp_35 -- Comp_12 -- Comp_31

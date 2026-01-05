@@ -1,0 +1,107 @@
+Netlist
+=======
+
+Components:
+Comp_0: Class 1 at [ 631 1147  744 1246]
+Comp_1: Class 1 at [321 191 411 286]
+Comp_2: Class 1 at [ 243 1144  353 1240]
+Comp_3: Class 1 at [212 836 303 933]
+Comp_4: Class 1 at [640 236 718 280]
+Comp_5: Class 14 at [536 221 585 266]
+Comp_6: Class 29 at [273 515 326 551]
+Comp_7: Class 1 at [ 984  353 1056  428]
+Comp_8: Class 29 at [436 515 492 550]
+Comp_9: Class 1 at [1057  508 1123  552]
+Comp_10: Class 24 at [665 170 704 197]
+Comp_11: Class 24 at [ 427 1145  459 1177]
+Comp_12: Class 30 at [652  68 708 115]
+Comp_13: Class 29 at [437 401 492 436]
+Comp_14: Class 24 at [ 427 1203  459 1237]
+Comp_15: Class 1 at [ 995  179 1081  244]
+Comp_16: Class 1 at [634 888 709 935]
+Comp_17: Class 29 at [362 515 418 551]
+Comp_18: Class 29 at [191 401 246 435]
+Comp_19: Class 24 at [557 811 592 847]
+Comp_20: Class 24 at [ 817 1149  848 1182]
+Comp_21: Class 29 at [189 515 247 550]
+Comp_22: Class 4 at [429 836 451 851]
+Comp_23: Class 29 at [270 401 326 438]
+Comp_24: Class 14 at [427 866 471 912]
+Comp_25: Class 24 at [ 818 1209  848 1242]
+Comp_26: Class 3 at [454 208 484 222]
+Comp_27: Class 29 at [359 399 419 438]
+Comp_28: Class 44 at [ 503 1389  528 1415]
+Comp_29: Class 2 at [310 835 326 858]
+Comp_30: Class 2 at [1076  272 1104  288]
+Comp_31: Class 3 at [1195  211 1224  227]
+Comp_32: Class 35 at [1141  177 1166  205]
+Comp_33: Class 2 at [538 163 563 178]
+Comp_34: Class 3 at [ 975  491 1006  507]
+Comp_35: Class 2 at [713 275 738 292]
+Comp_36: Class 44 at [ 540 1389  565 1415]
+Comp_37: Class 2 at [ 754 1204  771 1222]
+Comp_38: Class 44 at [694 534 724 563]
+Comp_39: Class 35 at [1141  204 1166  230]
+Comp_40: Class 2 at [165 416 184 442]
+Comp_41: Class 35 at [345 930 374 951]
+Comp_42: Class 2 at [605 767 623 792]
+Comp_43: Class 44 at [650 534 678 562]
+Comp_44: Class 3 at [1195  189 1224  206]
+Comp_45: Class 2 at [611 877 636 898]
+Comp_46: Class 35 at [455 285 482 307]
+Comp_47: Class 44 at [776 533 803 563]
+Comp_48: Class 2 at [1058  342 1082  359]
+Comp_49: Class 2 at [165 531 183 556]
+Comp_50: Class 0 at [ 168 1174  183 1193]
+Comp_51: Class 44 at [736 534 763 563]
+Comp_52: Class 0 at [606 914 624 932]
+Comp_53: Class 4 at [539 190 561 205]
+Comp_54: Class 44 at [ 580 1388  608 1415]
+Comp_55: Class 3 at [318 913 349 928]
+Comp_56: Class 2 at [1077  170 1099  186]
+Comp_57: Class 2 at [929 209 945 231]
+Comp_58: Class 2 at [ 979  176 1000  192]
+Comp_59: Class 0 at [308 871 322 887]
+Comp_60: Class 4 at [1012  512 1035  529]
+Comp_61: Class 4 at [345 295 360 313]
+Comp_62: Class 0 at [210 940 223 957]
+Comp_63: Class 3 at [955 203 983 216]
+Comp_64: Class 2 at [528 264 547 286]
+Comp_65: Class 0 at [455 315 474 328]
+Comp_66: Class 2 at [1129  530 1145  550]
+Comp_67: Class 2 at [ 754 1166  772 1187]
+Comp_68: Class 4 at [236 942 254 959]
+Comp_69: Class 2 at [ 755 1219  771 1232]
+Comp_70: Class 4 at [236 961 255 983]
+Comp_71: Class 4 at [574 264 592 287]
+Comp_72: Class 23 at [575 768 593 791]
+Comp_73: Class 0 at [689 157 705 172]
+Comp_74: Class 0 at [1126  365 1139  383]
+Comp_75: Class 3 at [429 267 458 282]
+Comp_76: Class 0 at [655 111 673 126]
+Comp_77: Class 2 at [ 364 1167  382 1184]
+Comp_78: Class 0 at [419 226 434 241]
+Comp_79: Class 4 at [1079  241 1103  257]
+Comp_80: Class 2 at [ 365 1192  382 1210]
+Comp_81: Class 0 at [187 892 203 907]
+Comp_82: Class 0 at [952 491 968 509]
+Comp_83: Class 35 at [1140  187 1165  216]
+Comp_84: Class 2 at [1058  418 1083  436]
+
+Connections:
+Net_4: Comp_10 -- Comp_12
+Net_5: Comp_56 -- Comp_30 -- Comp_15
+Net_7: Comp_33 -- Comp_5
+Net_8: Comp_57 -- Comp_58 -- Comp_15
+Net_10: Comp_1 -- Comp_26 -- Comp_61
+Net_12: Comp_35 -- Comp_4
+Net_14: Comp_64 -- Comp_46
+Net_15: Comp_18 -- Comp_27 -- Comp_13 -- Comp_23
+Net_16: Comp_9 -- Comp_34 -- Comp_60
+Net_17: Comp_8 -- Comp_17 -- Comp_21 -- Comp_6
+Net_20: Comp_72 -- Comp_42 -- Comp_19
+Net_21: Comp_24 -- Comp_22
+Net_22: Comp_3 -- Comp_68 -- Comp_29
+Net_26: Comp_80 -- Comp_2 -- Comp_77
+Net_27: Comp_50 -- Comp_2
+Net_28: Comp_0 -- Comp_67 -- Comp_37

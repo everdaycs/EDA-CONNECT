@@ -1,0 +1,57 @@
+Netlist
+=======
+
+Components:
+Comp_0: Class 1 at [219 230 327 346]
+Comp_1: Class 1 at [224 441 332 555]
+Comp_2: Class 1 at [174  64 255 142]
+Comp_3: Class 2 at [140 357 170 374]
+Comp_4: Class 2 at [156 154 182 169]
+Comp_5: Class 51 at [488 285 524 301]
+Comp_6: Class 2 at [145 566 175 583]
+Comp_7: Class 2 at [370 123 386 146]
+Comp_8: Class 2 at [370  78 386 101]
+Comp_9: Class 3 at [192 488 207 515]
+Comp_10: Class 51 at [574 505 612 522]
+Comp_11: Class 26 at [536 500 561 524]
+Comp_12: Class 51 at [487 505 525 521]
+Comp_13: Class 2 at [229 154 253 169]
+Comp_14: Class 51 at [573 285 611 301]
+Comp_15: Class 3 at [349 277 379 291]
+Comp_16: Class 3 at [328 128 361 140]
+Comp_17: Class 3 at [329  83 360  95]
+Comp_18: Class 26 at [535 276 564 306]
+Comp_19: Class 3 at [378 556 411 569]
+Comp_20: Class 51 at [390 320 423 336]
+Comp_21: Class 35 at [160 515 192 542]
+Comp_22: Class 3 at [187 274 202 302]
+Comp_23: Class 22 at [399 253 421 274]
+Comp_24: Class 4 at [171 442 188 464]
+Comp_25: Class 3 at [374 346 406 360]
+Comp_26: Class 51 at [394 531 429 546]
+Comp_27: Class 35 at [153 301 188 329]
+Comp_28: Class 4 at [411 443 427 463]
+Comp_29: Class 4 at [166 233 182 254]
+Comp_30: Class 2 at [378 293 401 309]
+Comp_31: Class 51 at [345 321 378 335]
+Comp_32: Class 51 at [349 531 383 545]
+Comp_33: Class 3 at [353 487 385 501]
+Comp_34: Class 4 at [405 233 422 253]
+Comp_35: Class 4 at [406 484 424 502]
+Comp_36: Class 6 at [347 236 393 248]
+Comp_37: Class 4 at [400 274 419 292]
+Comp_38: Class 0 at [207 440 222 449]
+Comp_39: Class 6 at [351 445 399 459]
+Comp_40: Class 22 at [404 463 426 482]
+Comp_41: Class 0 at [202 230 217 240]
+Comp_42: Class 0 at [191 173 206 183]
+Comp_43: Class 2 at [383 504 407 519]
+
+Connections:
+Net_4: Comp_2 -- Comp_42 -- Comp_4 -- Comp_13
+Net_7: Comp_15 -- Comp_23
+Net_10: Comp_3 -- Comp_27 -- Comp_22
+Net_11: Comp_25 -- Comp_20 -- Comp_31
+Net_15: Comp_33 -- Comp_35 -- Comp_28
+Net_18: Comp_9 -- Comp_21 -- Comp_6
+Net_19: Comp_32 -- Comp_26 -- Comp_19

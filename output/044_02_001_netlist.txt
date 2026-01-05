@@ -1,0 +1,44 @@
+Netlist
+=======
+
+Components:
+Comp_0: Class 1 at [470 242 578 341]
+Comp_1: Class 1 at [642 392 760 620]
+Comp_2: Class 24 at [1073  344 1108  379]
+Comp_3: Class 24 at [718 286 749 325]
+Comp_4: Class 24 at [759 177 789 218]
+Comp_5: Class 28 at [398 181 460 208]
+Comp_6: Class 18 at [411 677 437 706]
+Comp_7: Class 24 at [534 396 571 613]
+Comp_8: Class 24 at [257 426 287 501]
+Comp_9: Class 18 at [426 732 451 761]
+Comp_10: Class 24 at [846 399 881 615]
+Comp_11: Class 24 at [389 509 421 582]
+Comp_12: Class 2 at [680 638 709 656]
+Comp_13: Class 24 at [389 419 423 493]
+Comp_14: Class 28 at [841 295 870 348]
+Comp_15: Class 18 at [337 719 362 746]
+Comp_16: Class 18 at [362 654 388 683]
+Comp_17: Class 2 at [611 316 634 337]
+Comp_18: Class 2 at [623 378 646 396]
+Comp_19: Class 28 at [700 104 731 160]
+Comp_20: Class 2 at [376 263 396 288]
+Comp_21: Class 0 at [682 103 696 120]
+Comp_22: Class 2 at [1047  372 1071  389]
+Comp_23: Class 28 at [ 985  268 1018  326]
+Comp_24: Class 2 at [451 333 476 350]
+Comp_25: Class 2 at [692 316 716 333]
+Comp_26: Class 0 at [423 258 439 274]
+Comp_27: Class 0 at [752 385 769 398]
+Comp_28: Class 0 at [429 519 444 538]
+Comp_29: Class 0 at [597 277 611 294]
+Comp_30: Class 0 at [430 433 443 450]
+Comp_31: Class 0 at [821 288 836 307]
+Comp_32: Class 2 at [431 551 447 575]
+Comp_33: Class 0 at [967 268 981 287]
+Comp_34: Class 2 at [235 431 249 450]
+
+Connections:
+Net_11: Comp_0 -- Comp_26 -- Comp_29
+Net_22: Comp_1 -- Comp_7
+Net_24: Comp_11 -- Comp_28 -- Comp_13 -- Comp_30

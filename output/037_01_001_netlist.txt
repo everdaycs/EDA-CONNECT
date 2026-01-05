@@ -1,0 +1,57 @@
+Netlist
+=======
+
+Components:
+Comp_0: Class 1 at [282  72 360 212]
+Comp_1: Class 1 at [646  34 738 170]
+Comp_2: Class 75 at [ 32 122  62 147]
+Comp_3: Class 75 at [32 40 64 63]
+Comp_4: Class 75 at [ 32  79  66 103]
+Comp_5: Class 2 at [522 127 548 141]
+Comp_6: Class 3 at [376 202 393 232]
+Comp_7: Class 2 at [306 222 333 236]
+Comp_8: Class 35 at [460 248 490 280]
+Comp_9: Class 75 at [ 33 164  64 188]
+Comp_10: Class 2 at [371 281 399 296]
+Comp_11: Class 35 at [536 248 565 281]
+Comp_12: Class 2 at [477 128 502 142]
+Comp_13: Class 2 at [102  97 128 112]
+Comp_14: Class 7 at [ 81  46 108  59]
+Comp_15: Class 4 at [454  94 475 107]
+Comp_16: Class 2 at [ 64 182  88 197]
+Comp_17: Class 2 at [466 287 494 302]
+Comp_18: Class 3 at [472 206 487 235]
+Comp_19: Class 0 at [472 188 488 198]
+Comp_20: Class 3 at [674 190 705 202]
+Comp_21: Class 35 at [362 244 395 270]
+Comp_22: Class 2 at [716 185 730 208]
+Comp_23: Class 4 at [105  65 125  77]
+Comp_24: Class 4 at [333  37 347  54]
+Comp_25: Class 3 at [548 205 563 236]
+Comp_26: Class 0 at [405  90 413 104]
+Comp_27: Class 0 at [ 66 123  83 134]
+Comp_28: Class 0 at [547 188 563 198]
+Comp_29: Class 4 at [129  65 151  77]
+Comp_30: Class 0 at [498  68 511  76]
+Comp_31: Class 2 at [650 185 664 208]
+Comp_32: Class 6 at [364  89 398 100]
+Comp_33: Class 4 at [526  96 545 107]
+Comp_34: Class 2 at [300  36 313  57]
+Comp_35: Class 4 at [370  58 391  70]
+Comp_36: Class 4 at [505  95 524 106]
+Comp_37: Class 4 at [480  95 500 106]
+Comp_38: Class 0 at [107  39 122  48]
+Comp_39: Class 3 at [352  53 366  78]
+Comp_40: Class 43 at [259 164 280 181]
+Comp_41: Class 43 at [259 188 279 207]
+Comp_42: Class 0 at [547 286 563 295]
+Comp_43: Class 0 at [68 37 82 48]
+Comp_44: Class 0 at [247  84 262  92]
+Comp_45: Class 43 at [259 175 280 192]
+Comp_46: Class 0 at [371  33 388  42]
+
+Connections:
+Net_0: Comp_3 -- Comp_43 -- Comp_13 -- Comp_14
+Net_2: Comp_0 -- Comp_32 -- Comp_35 -- Comp_44 -- Comp_24
+Net_6: Comp_12 -- Comp_5 -- Comp_30 -- Comp_15
+Net_7: Comp_8 -- Comp_10 -- Comp_21 -- Comp_6

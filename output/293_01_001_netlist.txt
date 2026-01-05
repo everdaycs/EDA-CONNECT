@@ -1,0 +1,61 @@
+Netlist
+=======
+
+Components:
+Comp_0: Class 1 at [368 219 572 483]
+Comp_1: Class 1 at [436 652 511 707]
+Comp_2: Class 1 at [251 646 305 710]
+Comp_3: Class 1 at [834 210 886 264]
+Comp_4: Class 2 at [890 637 919 654]
+Comp_5: Class 1 at [783 381 834 438]
+Comp_6: Class 1 at [418 757 482 803]
+Comp_7: Class 24 at [1186  367 1222  445]
+Comp_8: Class 49 at [853 581 897 615]
+Comp_9: Class 2 at [262 489 288 505]
+Comp_10: Class 2 at [501 824 529 840]
+Comp_11: Class 4 at [504 785 524 809]
+Comp_12: Class 2 at [819 672 849 691]
+Comp_13: Class 2 at [1126  637 1154  655]
+Comp_14: Class 4 at [823 635 847 662]
+Comp_15: Class 2 at [1219  182 1236  207]
+Comp_16: Class 2 at [926 243 954 260]
+Comp_17: Class 2 at [760 239 788 254]
+Comp_18: Class 3 at [1133  598 1148  628]
+Comp_19: Class 2 at [836 365 860 381]
+Comp_20: Class 4 at [309 197 331 218]
+Comp_21: Class 4 at [272 285 296 303]
+Comp_22: Class 4 at [959 200 979 226]
+Comp_23: Class 2 at [311 748 339 765]
+Comp_24: Class 0 at [313 637 337 650]
+Comp_25: Class 49 at [1149  549 1188  579]
+Comp_26: Class 3 at [1167  189 1202  205]
+Comp_27: Class 2 at [321 163 348 179]
+Comp_28: Class 4 at [739 201 760 225]
+Comp_29: Class 2 at [1135  354 1163  372]
+Comp_30: Class 0 at [523 759 540 780]
+Comp_31: Class 4 at [930 202 951 224]
+Comp_32: Class 3 at [317 708 332 737]
+Comp_33: Class 3 at [367 688 402 704]
+Comp_34: Class 4 at [338 199 360 218]
+Comp_35: Class 4 at [287 464 310 485]
+Comp_36: Class 0 at [1212  553 1237  569]
+Comp_37: Class 3 at [825 569 843 601]
+Comp_38: Class 0 at [575 210 605 231]
+Comp_39: Class 0 at [261 306 283 329]
+Comp_40: Class 2 at [636 252 663 270]
+Comp_41: Class 4 at [307 491 331 506]
+Comp_42: Class 2 at [244 263 262 288]
+Comp_43: Class 0 at [1167  351 1191  365]
+Comp_44: Class 0 at [824 549 846 564]
+Comp_45: Class 0 at [863 372 887 385]
+Comp_46: Class 0 at [1096  184 1108  204]
+Comp_47: Class 4 at [606 224 628 245]
+Comp_48: Class 0 at [287 222 305 247]
+
+Connections:
+Net_6: Comp_22 -- Comp_31
+Net_9: Comp_0 -- Comp_48
+Net_18: Comp_9 -- Comp_35
+Net_23: Comp_33 -- Comp_2
+Net_25: Comp_1 -- Comp_33
+Net_29: Comp_10 -- Comp_11 -- Comp_6

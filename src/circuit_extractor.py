@@ -195,43 +195,68 @@ class CircuitExtractor:
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python circuit_extractor.py <image_path>")
+        print("Usage: python circuit_extractor.py <image_path_or_directory>")
         return
 
-    image_path = sys.argv[1]
+    input_path = sys.argv[1]
     model_path = '/home/kaga/Desktop/EDA-Connect/runs/detect/train_demo/weights/best.pt'
     
     extractor = CircuitExtractor(model_path)
     
-    print("Detecting components...")
-    extractor.detect_components(image_path)
-    print(f"Found {len(extractor.components)} components.")
-    
-    print("Extracting wires...")
-    extractor.extract_wires(image_path)
-    
-    print("Building graph...")
-    extractor.build_graph()
-    
-    output_txt = "output_netlist.txt"
-    extractor.save_netlist(output_txt)
-    print(f"Netlist saved to {output_txt}")
-    
-    # Visualization (Optional, save to file)
-    img = cv2.imread(image_path)
-    for comp in extractor.components:
-        x1, y1, x2, y2 = comp['bbox']
-        cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
-        cv2.putText(img, f"C{comp['class']}", (x1, y1-5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
+    # Support both single file and directory
+    if os.path.isdir(input_path):
+        image_extensions = ('.png', '.jpg', '.jpeg', '.bmp')
+        image_files = [os.path.join(input_path, f) for f in os.listdir(input_path) 
+                       if f.lower().endswith(image_extensions)]
+        print(f"Processing directory: {input_path} ({len(image_files)} images found)")
+    else:
+        image_files = [input_path]
+
+    output_dir = "output"
+    os.makedirs(output_dir, exist_ok=True)
+
+    for img_path in image_files:
+        base_name = os.path.splitext(os.path.basename(img_path))[0]
+        print(f"\n--- Processing: {img_path} ---")
         
-    # Draw skeleton
-    skeleton_bgr = cv2.cvtColor(extractor.skeleton_img, cv2.COLOR_GRAY2BGR)
-    skeleton_bgr[extractor.skeleton_img > 0] = [0, 0, 255] # Red skeleton
-    
-    # Overlay
-    added_image = cv2.addWeighted(img, 0.7, skeleton_bgr, 0.3, 0)
-    cv2.imwrite("result_visualization.png", added_image)
-    print("Visualization saved to result_visualization.png")
+        try:
+            print("Detecting components...")
+            extractor.detect_components(img_path)
+            print(f"Found {len(extractor.components)} components.")
+            
+            print("Extracting wires...")
+            extractor.extract_wires(img_path)
+            
+            print("Building graph...")
+            extractor.build_graph()
+            
+            output_txt = os.path.join(output_dir, f"{base_name}_netlist.txt")
+            extractor.save_netlist(output_txt)
+            print(f"Netlist saved to {output_txt}")
+            
+            # Visualization
+            img = cv2.imread(img_path)
+            if img is None:
+                print(f"Error: Could not read image {img_path}")
+                continue
+
+            for comp in extractor.components:
+                x1, y1, x2, y2 = comp['bbox']
+                cv2.rectangle(img, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                cv2.putText(img, f"C{comp['class']}", (x1, y1-5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1)
+                
+            # Draw skeleton
+            skeleton_bgr = cv2.cvtColor(extractor.skeleton_img, cv2.COLOR_GRAY2BGR)
+            skeleton_bgr[extractor.skeleton_img > 0] = [0, 0, 255] # Red skeleton
+            
+            # Overlay
+            added_image = cv2.addWeighted(img, 0.7, skeleton_bgr, 0.3, 0)
+            vis_path = os.path.join(output_dir, f"{base_name}_vis.png")
+            cv2.imwrite(vis_path, added_image)
+            print(f"Visualization saved to {vis_path}")
+            
+        except Exception as e:
+            print(f"Error processing {img_path}: {e}")
 
 if __name__ == '__main__':
     main()

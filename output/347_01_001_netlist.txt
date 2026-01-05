@@ -1,0 +1,130 @@
+Netlist
+=======
+
+Components:
+Comp_0: Class 70 at [725 156 784 265]
+Comp_1: Class 1 at [125 401 406 674]
+Comp_2: Class 1 at [135  62 210 106]
+Comp_3: Class 1 at [260  63 335 105]
+Comp_4: Class 1 at [520  63 594 105]
+Comp_5: Class 1 at [390  63 465 105]
+Comp_6: Class 1 at [651  63 728 105]
+Comp_7: Class 1 at [707 324 778 496]
+Comp_8: Class 1 at [910 118 971 179]
+Comp_9: Class 1 at [910 233 968 288]
+Comp_10: Class 2 at [1045  593 1074  609]
+Comp_11: Class 2 at [795 488 824 505]
+Comp_12: Class 82 at [721 551 790 617]
+Comp_13: Class 3 at [ 993  554 1006  581]
+Comp_14: Class 3 at [246  39 273  50]
+Comp_15: Class 2 at [797 312 824 329]
+Comp_16: Class 24 at [550 432 577 465]
+Comp_17: Class 2 at [797 610 823 624]
+Comp_18: Class 29 at [166 205 192 228]
+Comp_19: Class 2 at [245 789 274 803]
+Comp_20: Class 3 at [1072  554 1086  581]
+Comp_21: Class 2 at [535 163 549 186]
+Comp_22: Class 3 at [ 993  493 1006  525]
+Comp_23: Class 3 at [1051  322 1080  335]
+Comp_24: Class 2 at [505 613 521 634]
+Comp_25: Class 2 at [535 253 550 276]
+Comp_26: Class 2 at [357 729 384 744]
+Comp_27: Class 3 at [928 334 941 364]
+Comp_28: Class 2 at [881  75 907  89]
+Comp_29: Class 3 at [1038   46 1051   72]
+Comp_30: Class 2 at [747  33 761  56]
+Comp_31: Class 2 at [ 48 552  66 574]
+Comp_32: Class 2 at [621 537 641 552]
+Comp_33: Class 22 at [945 474 974 505]
+Comp_34: Class 3 at [1049   72 1081   86]
+Comp_35: Class 3 at [941 322 970 335]
+Comp_36: Class 3 at [913 492 926 524]
+Comp_37: Class 35 at [409 177 426 197]
+Comp_38: Class 4 at [474 526 489 541]
+Comp_39: Class 3 at [1038  335 1051  363]
+Comp_40: Class 3 at [1024  483 1055  494]
+Comp_41: Class 35 at [328 239 353 264]
+Comp_42: Class 4 at [830 464 848 477]
+Comp_43: Class 3 at [940  72 971  85]
+Comp_44: Class 2 at [506 513 521 535]
+Comp_45: Class 2 at [209 202 226 226]
+Comp_46: Class 2 at [559 537 578 553]
+Comp_47: Class 2 at [210 307 231 323]
+Comp_48: Class 35 at [328 178 347 198]
+Comp_49: Class 2 at [625 502 640 523]
+Comp_50: Class 35 at [489 177 507 197]
+Comp_51: Class 35 at [413 240 430 261]
+Comp_52: Class 4 at [1016  148 1032  164]
+Comp_53: Class 3 at [928  46 941  71]
+Comp_54: Class 2 at [187 307 210 324]
+Comp_55: Class 35 at [369 177 387 197]
+Comp_56: Class 35 at [493 241 511 262]
+Comp_57: Class 35 at [373 240 390 260]
+Comp_58: Class 3 at [1090  402 1121  415]
+Comp_59: Class 35 at [449 177 466 197]
+Comp_60: Class 2 at [1072  383 1098  399]
+Comp_61: Class 6 at [512 572 558 588]
+Comp_62: Class 4 at [1088  481 1106  496]
+Comp_63: Class 22 at [886 556 913 583]
+Comp_64: Class 35 at [454 241 469 260]
+Comp_65: Class 3 at [264 740 277 768]
+Comp_66: Class 4 at [1132  212 1146  229]
+Comp_67: Class 4 at [362 703 377 717]
+Comp_68: Class 3 at [1050  369 1079  386]
+Comp_69: Class 4 at [ 93  95 108 107]
+Comp_70: Class 0 at [660 570 678 581]
+Comp_71: Class 35 at [565 483 590 514]
+Comp_72: Class 4 at [342 702 357 717]
+Comp_73: Class 4 at [828 583 856 602]
+Comp_74: Class 74 at [1091  191 1119  221]
+Comp_75: Class 4 at [954 558 974 576]
+Comp_76: Class 4 at [877  50 891  62]
+Comp_77: Class 22 at [910 557 931 578]
+Comp_78: Class 3 at [192 333 205 360]
+Comp_79: Class 4 at [1032  557 1046  575]
+Comp_80: Class 35 at [564 503 590 532]
+Comp_81: Class 2 at [ 80 113  95 135]
+Comp_82: Class 4 at [897  50 912  62]
+Comp_83: Class 2 at [581 538 598 552]
+Comp_84: Class 2 at [239 307 272 325]
+Comp_85: Class 3 at [473 477 510 492]
+Comp_86: Class 4 at [382 701 396 718]
+Comp_87: Class 3 at [242 740 257 768]
+Comp_88: Class 74 at [488 492 519 515]
+Comp_89: Class 5 at [487 594 512 613]
+Comp_90: Class 3 at [1090  351 1119  366]
+Comp_91: Class 2 at [601 537 619 552]
+Comp_92: Class 4 at [252 330 269 350]
+Comp_93: Class 4 at [240 329 257 350]
+Comp_94: Class 3 at [251 740 268 768]
+Comp_95: Class 4 at [222 331 238 349]
+Comp_96: Class 4 at [342 359 357 370]
+Comp_97: Class 3 at [65 79 93 90]
+Comp_98: Class 74 at [1074  219 1097  246]
+Comp_99: Class 4 at [210 331 227 348]
+Comp_100: Class 4 at [213 332 233 349]
+Comp_101: Class 4 at [362 359 377 370]
+Comp_102: Class 4 at [621 565 639 578]
+
+Connections:
+Net_0: Comp_3 -- Comp_14
+Net_1: Comp_64 -- Comp_4 -- Comp_37 -- Comp_5 -- Comp_41 -- Comp_48 -- Comp_50 -- Comp_51 -- Comp_55 -- Comp_56 -- Comp_57 -- Comp_59
+Net_2: Comp_28 -- Comp_43 -- Comp_76 -- Comp_53
+Net_4: Comp_3 -- Comp_5
+Net_6: Comp_4 -- Comp_6
+Net_8: Comp_2 -- Comp_69
+Net_9: Comp_2 -- Comp_3
+Net_12: Comp_8 -- Comp_9
+Net_15: Comp_9 -- Comp_27
+Net_17: Comp_96 -- Comp_1 -- Comp_78 -- Comp_47 -- Comp_84
+Net_18: Comp_42 -- Comp_11 -- Comp_15 -- Comp_7
+Net_20: Comp_60 -- Comp_39
+Net_21: Comp_1 -- Comp_31
+Net_22: Comp_1 -- Comp_38 -- Comp_24 -- Comp_89 -- Comp_61
+Net_23: Comp_71 -- Comp_46 -- Comp_16 -- Comp_49 -- Comp_85
+Net_24: Comp_33 -- Comp_22
+Net_27: Comp_36 -- Comp_63
+Net_28: Comp_73 -- Comp_12 -- Comp_17
+Net_29: Comp_10 -- Comp_75 -- Comp_13
+Net_31: Comp_61 -- Comp_102
+Net_34: Comp_1 -- Comp_65 -- Comp_67 -- Comp_72 -- Comp_19 -- Comp_87 -- Comp_26

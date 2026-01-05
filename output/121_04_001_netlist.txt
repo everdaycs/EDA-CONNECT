@@ -1,0 +1,57 @@
+Netlist
+=======
+
+Components:
+Comp_0: Class 1 at [837  99 935 161]
+Comp_1: Class 1 at [ 91  82 178 158]
+Comp_2: Class 1 at [ 960  450 1061  505]
+Comp_3: Class 1 at [ 967  366 1044  412]
+Comp_4: Class 3 at [1083  424 1098  453]
+Comp_5: Class 44 at [191 422 217 446]
+Comp_6: Class 44 at [278 422 301 446]
+Comp_7: Class 2 at [938  87 962 105]
+Comp_8: Class 2 at [1076  512 1104  529]
+Comp_9: Class 44 at [155 421 178 445]
+Comp_10: Class 2 at [ 971  278 1000  295]
+Comp_11: Class 2 at [172 150 197 164]
+Comp_12: Class 2 at [640 244 672 262]
+Comp_13: Class 24 at [317 509 346 546]
+Comp_14: Class 22 at [122 192 145 216]
+Comp_15: Class 3 at [978 180 992 209]
+Comp_16: Class 44 at [243 422 266 446]
+Comp_17: Class 27 at [814 199 834 238]
+Comp_18: Class 2 at [173  72 197  88]
+Comp_19: Class 2 at [ 63 113  78 136]
+Comp_20: Class 2 at [160 192 176 217]
+Comp_21: Class 2 at [282 113 295 136]
+Comp_22: Class 0 at [801 375 818 386]
+Comp_23: Class 0 at [781  51 798  60]
+Comp_24: Class 35 at [1041  131 1065  165]
+Comp_25: Class 0 at [800 471 819 482]
+Comp_26: Class 4 at [644 187 667 209]
+Comp_27: Class 3 at [788 243 820 255]
+Comp_28: Class 2 at [764 207 778 231]
+Comp_29: Class 7 at [689  53 751  69]
+Comp_30: Class 35 at [1037  106 1066  133]
+Comp_31: Class 3 at [1037   80 1065   97]
+Comp_32: Class 4 at [974 243 997 256]
+Comp_33: Class 3 at [1037   56 1066   72]
+Comp_34: Class 0 at [198  96 208 112]
+Comp_35: Class 3 at [787 182 821 194]
+Comp_36: Class 2 at [191 458 217 473]
+Comp_37: Class 3 at [853 383 885 395]
+Comp_38: Class 2 at [720 118 733 140]
+Comp_39: Class 3 at [239 118 270 130]
+Comp_40: Class 3 at [240 106 270 119]
+Comp_41: Class 0 at [199 127 209 141]
+Comp_42: Class 0 at [157 457 176 468]
+Comp_43: Class 0 at [ 99 195 113 212]
+Comp_44: Class 0 at [646  56 657  73]
+Comp_45: Class 4 at [883 401 906 415]
+
+Connections:
+Net_2: Comp_17 -- Comp_12 -- Comp_28 -- Comp_29
+Net_4: Comp_24 -- Comp_30 -- Comp_31
+Net_7: Comp_0 -- Comp_7
+Net_8: Comp_21 -- Comp_39
+Net_13: Comp_2 -- Comp_37 -- Comp_45

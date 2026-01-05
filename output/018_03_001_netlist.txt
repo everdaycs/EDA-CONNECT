@@ -1,0 +1,73 @@
+Netlist
+=======
+
+Components:
+Comp_0: Class 1 at [595  98 756 289]
+Comp_1: Class 24 at [1072  335 1115  413]
+Comp_2: Class 1 at [608 480 714 526]
+Comp_3: Class 24 at [1074  168 1119  273]
+Comp_4: Class 2 at [141 503 168 520]
+Comp_5: Class 4 at [504 133 525 155]
+Comp_6: Class 2 at [451 167 479 185]
+Comp_7: Class 41 at [935 245 955 253]
+Comp_8: Class 2 at [663  72 687  89]
+Comp_9: Class 2 at [501 167 528 186]
+Comp_10: Class 4 at [453 134 476 154]
+Comp_11: Class 2 at [552 482 579 499]
+Comp_12: Class 4 at [835 448 855 467]
+Comp_13: Class 41 at [280 230 299 239]
+Comp_14: Class 6 at [640 431 679 445]
+Comp_15: Class 2 at [449 301 479 321]
+Comp_16: Class 24 at [113  79 169 496]
+Comp_17: Class 41 at [279 409 301 418]
+Comp_18: Class 3 at [456 224 473 253]
+Comp_19: Class 4 at [554 448 577 470]
+Comp_20: Class 2 at [143  48 166  64]
+Comp_21: Class 4 at [454 270 476 288]
+Comp_22: Class 2 at [756  91 777 109]
+Comp_23: Class 2 at [809 483 830 500]
+Comp_24: Class 43 at [783 221 808 246]
+Comp_25: Class 2 at [578  91 599 109]
+Comp_26: Class 43 at [797 400 821 425]
+Comp_27: Class 47 at [1005  392 1035  408]
+Comp_28: Class 41 at [280 350 300 358]
+Comp_29: Class 41 at [279 290 300 298]
+Comp_30: Class 4 at [789 447 811 468]
+Comp_31: Class 3 at [838 485 852 512]
+Comp_32: Class 41 at [279 220 300 229]
+Comp_33: Class 41 at [279 190 300 199]
+Comp_34: Class 41 at [935 255 955 264]
+Comp_35: Class 41 at [261 239 281 249]
+Comp_36: Class 41 at [279 380 301 388]
+Comp_37: Class 41 at [934 215 955 224]
+Comp_38: Class 41 at [279 320 300 328]
+Comp_39: Class 41 at [279 200 300 208]
+Comp_40: Class 41 at [280 170 300 178]
+Comp_41: Class 43 at [1021   77 1049  109]
+Comp_42: Class 41 at [279 399 300 408]
+Comp_43: Class 41 at [279 260 300 268]
+Comp_44: Class 3 at [269 113 300 125]
+Comp_45: Class 41 at [935 194 955 204]
+Comp_46: Class 41 at [260 359 280 369]
+Comp_47: Class 41 at [934 225 956 234]
+Comp_48: Class 22 at [736 430 762 448]
+Comp_49: Class 41 at [935 184 955 193]
+Comp_50: Class 41 at [279 280 300 288]
+Comp_51: Class 47 at [432 508 458 525]
+Comp_52: Class 3 at [456 477 472 511]
+Comp_53: Class 41 at [278 370 301 379]
+Comp_54: Class 41 at [279 340 300 348]
+Comp_55: Class 41 at [279 310 300 318]
+Comp_56: Class 41 at [935 205 955 214]
+Comp_57: Class 41 at [935 235 955 244]
+Comp_58: Class 41 at [280 250 300 259]
+
+Connections:
+Net_6: Comp_16 -- Comp_4
+Net_9: Comp_0 -- Comp_25
+Net_12: Comp_0 -- Comp_24 -- Comp_22
+Net_13: Comp_32 -- Comp_33 -- Comp_35 -- Comp_36 -- Comp_38 -- Comp_43 -- Comp_13 -- Comp_46 -- Comp_17 -- Comp_28 -- Comp_29
+Net_14: Comp_37 -- Comp_45 -- Comp_47 -- Comp_7
+Net_18: Comp_1 -- Comp_27
+Net_21: Comp_12 -- Comp_48 -- Comp_23 -- Comp_26 -- Comp_30
+Net_22: Comp_51 -- Comp_52

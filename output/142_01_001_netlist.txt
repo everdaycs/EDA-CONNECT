@@ -1,0 +1,54 @@
+Netlist
+=======
+
+Components:
+Comp_0: Class 1 at [191 108 255 178]
+Comp_1: Class 1 at [559 122 644 166]
+Comp_2: Class 1 at [208 392 272 433]
+Comp_3: Class 4 at [ 99 413 121 436]
+Comp_4: Class 2 at [385 501 415 518]
+Comp_5: Class 2 at [760 382 790 399]
+Comp_6: Class 2 at [116 462 144 478]
+Comp_7: Class 4 at [390 413 409 435]
+Comp_8: Class 15 at [755 490 796 526]
+Comp_9: Class 2 at [437 149 463 164]
+Comp_10: Class 2 at [126 173 153 190]
+Comp_11: Class 3 at [347 448 361 479]
+Comp_12: Class 4 at [435 412 455 438]
+Comp_13: Class 0 at [537 395 548 411]
+Comp_14: Class 2 at [646 189 673 204]
+Comp_15: Class 4 at [480 411 500 439]
+Comp_16: Class 3 at [348 410 361 436]
+Comp_17: Class 35 at [521 116 541 143]
+Comp_18: Class 2 at [681 189 708 205]
+Comp_19: Class 24 at [797 224 835 264]
+Comp_20: Class 2 at [226 199 253 213]
+Comp_21: Class 4 at [509 151 530 164]
+Comp_22: Class 3 at [659 128 690 141]
+Comp_23: Class 3 at [469 128 498 141]
+Comp_24: Class 4 at [477 151 501 164]
+Comp_25: Class 3 at [768 419 782 448]
+Comp_26: Class 0 at [ 80 396  94 411]
+Comp_27: Class 0 at [667 495 682 505]
+Comp_28: Class 2 at [724 122 741 145]
+Comp_29: Class 0 at [836 496 853 505]
+Comp_30: Class 2 at [778 256 800 269]
+Comp_31: Class 4 at [683 162 705 177]
+Comp_32: Class 0 at [441 121 458 133]
+Comp_33: Class 4 at [649 162 670 177]
+Comp_34: Class 0 at [539 190 560 204]
+Comp_35: Class 6 at [304 397 342 407]
+Comp_36: Class 22 at [699 471 720 498]
+Comp_37: Class 3 at [144 131 175 144]
+Comp_38: Class 3 at [144 142 176 155]
+Comp_39: Class 2 at [856 231 871 255]
+Comp_40: Class 0 at [106 116 123 125]
+Comp_41: Class 0 at [781 224 797 236]
+Comp_42: Class 0 at [722 147 737 163]
+
+Connections:
+Net_5: Comp_0 -- Comp_40 -- Comp_10 -- Comp_37
+Net_6: Comp_1 -- Comp_9 -- Comp_17 -- Comp_21 -- Comp_23
+Net_7: Comp_1 -- Comp_22
+Net_12: Comp_16 -- Comp_11
+Net_18: Comp_8 -- Comp_25
