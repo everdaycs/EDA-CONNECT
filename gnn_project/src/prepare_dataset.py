@@ -4,17 +4,23 @@ import cv2
 import numpy as np
 import torch
 import glob
-from skimage.morphology import skeletonize
+import sys
 from torch_geometric.data import Data
 from tqdm import tqdm
 import argparse
 from concurrent.futures import ProcessPoolExecutor
 
+# Add project root to sys.path for shared imports
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+if ROOT not in sys.path:
+    sys.path.append(ROOT)
+from src.skeleton_cv import extract_skeleton_cv
+
 def process_single_sample(args_tuple):
     """
     Worker function for parallel processing.
     """
-    name, data_root, output_dir, r_graph, d_attach, num_classes = args_tuple
+    name, data_root, output_dir, r_graph, d_attach, num_classes, skel_source, skel_deit_dir = args_tuple
     
     image_dir = os.path.join(data_root, 'images')
     label_dir = os.path.join(data_root, 'labels')
@@ -39,13 +45,41 @@ def process_single_sample(args_tuple):
     if img is None: return None
     H, W = img.shape[:2]
 
-    # 2. Skeletonize (Image Processing)
-    # This is often the bottleneck, so mp helps a lot
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
-                                  cv2.THRESH_BINARY_INV, 11, 2)
-    skel_bool = skeletonize(thresh > 0)
-    skel_thinned = skel_bool.astype(np.uint8) * 255
+    # 2. Skeletonize (Support Sources)
+    skel_thinned = None
+    
+    # Strategy:
+    # Rule (Default): Compute on fly
+    # DeiT: Load from skel_deit_dir
+    # Auto: Try DeiT, failover to Rule
+    
+    if skel_source in ['deit', 'auto']:
+        if skel_deit_dir:
+            # Assuming skel_deit_dir/<name>.png or similar pattern
+            # Or maybe output/<name>/skeleton_deit.png?
+            # The prompt says: "use output/<stem>/skeleton_deit.png (or specified directory)"
+            # Let's assume standard flat dir for simplicity in training phase, 
+            # Or check specific path structure if training from end2end output.
+            # To be robust, let's assume flat dir <skel_deit_dir>/<name>.png
+            deit_path = os.path.join(skel_deit_dir, f"{name}.png")
+            if os.path.exists(deit_path):
+                skel_img = cv2.imread(deit_path, cv2.IMREAD_GRAYSCALE)
+                if skel_img is not None:
+                    # Resize if needed? Assuming DeiT output matches input dim
+                    if skel_img.shape[:2] != (H, W):
+                        skel_img = cv2.resize(skel_img, (W, H), interpolation=cv2.INTER_NEAREST)
+                    _, skel_thinned = cv2.threshold(skel_img, 127, 255, cv2.THRESH_BINARY)
+    
+    if skel_thinned is None:
+        if skel_source == 'deit':
+            # Strict mode requested but failed
+            return None
+        
+        # Fallback to Rule-based CV
+        try:
+            skel_thinned = extract_skeleton_cv(img)
+        except:
+            return None
     
     # Connected Components
     num_labels_cc, labels_cc, stats, centroids = cv2.connectedComponentsWithStats(skel_thinned, connectivity=8)
@@ -155,6 +189,8 @@ if __name__ == '__main__':
     parser.add_argument('--r_graph', type=int, default=300)
     parser.add_argument('--d_attach', type=int, default=20)
     parser.add_argument('--num_workers', type=int, default=os.cpu_count())
+    parser.add_argument('--skel_source', type=str, default='rule', choices=['rule', 'deit', 'auto'])
+    parser.add_argument('--skel_deit_dir', type=str, default=None, help='Directory containing DeiT skeletons')
     args = parser.parse_args()
     
     os.makedirs(args.output_dir, exist_ok=True)
@@ -169,7 +205,7 @@ if __name__ == '__main__':
     print(f"🚀 Processing {len(samples)} samples with {args.num_workers} workers...")
     
     # Prepare args for map
-    tasks = [(s, args.data_root, args.output_dir, args.r_graph, args.d_attach, args.num_classes) for s in samples]
+    tasks = [(s, args.data_root, args.output_dir, args.r_graph, args.d_attach, args.num_classes, args.skel_source, args.skel_deit_dir) for s in samples]
     
     processed_count = 0
     with ProcessPoolExecutor(max_workers=args.num_workers) as executor:

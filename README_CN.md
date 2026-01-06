@@ -111,6 +111,24 @@ python gnn_project/src/infer.py \
   --ckpt ./gnn_project/checkpoints/best_model.pth
 ```
 
+##两阶段端到端提取 (DeiT + GNN)
+
+本项目新增了基于 Vision Transformer 的两阶段提取方案，鲁棒性更强。
+
+### 1. 结构
+- **Stage 1**: 使用 `vit_skel_project` (DeiT) 预测导线骨架图，替代传统的形态学规则。
+- **Stage 2**: 使用 `gnn_project` 基于预测的骨架生成连接图，并进行链路预测。
+
+### 2. 也是一键运行
+```bash
+python pipeline/run_end2end.py \
+  --image cpnt_detect_demo/images/001_01_001.png \
+  --det_json cpnt_detect_demo/det_json/001_01_001.json \
+  --deit_ckpt vit_skel_project/checkpoints/best.pt \
+  --gnn_ckpt gnn_project/checkpoints/best_model.pth \
+  --out_dir output/001_01_001
+```
+
 ---
 
 ## 未来改进方向
@@ -124,9 +142,12 @@ python gnn_project/src/infer.py \
 ```
 EDA-Connect/
 ├── cpnt_detect_demo/       # 示例数据集 (Images & Labels)
-├── gnn_project/            # [新增] GNN 弱监督网表提取原型
+├── pipeline/               # [新增] 端到端运行脚本
+├── gnn_project/            # GNN 弱监督网表提取原型
 │   ├── src/                # GNN 数据处理、模型与训练代码
 │   └── README.md           # GNN 模块独立文档
+├── vit_skel_project/       # [新增] DeiT/ViT 骨架提取模型 (Stage 1)
+│   └── src/
 ├── output/                 # 运行结果输出目录
 ├── runs/                   # YOLO 训练日志与权重
 ├── src/                    # 源代码

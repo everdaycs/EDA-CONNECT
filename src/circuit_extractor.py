@@ -1,11 +1,16 @@
 import cv2
 import numpy as np
 from ultralytics import YOLO
-from skimage.morphology import skeletonize
 import networkx as nx
 import matplotlib.pyplot as plt
 import os
 import sys
+
+# Add project root to sys.path
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.append(ROOT)
+from src.skeleton_cv import extract_skeleton_cv
 
 class CircuitExtractor:
     def __init__(self, model_path):
@@ -38,33 +43,9 @@ class CircuitExtractor:
 
     def extract_wires(self, image_path):
         """
-        Extract wires by skeletonizing the entire image.
+        Extract wires using the rule-based CV approach.
         """
-        img = cv2.imread(image_path)
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        
-        # 2. Thresholding
-        # Adaptive thresholding is good for varying lighting
-        thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
-                                      cv2.THRESH_BINARY_INV, 11, 2)
-        
-        # 3. Noise removal and Closing
-        kernel = np.ones((3,3), np.uint8)
-        opening = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
-        
-        # Closing to bridge gaps
-        closing_kernel = np.ones((5,5), np.uint8)
-        closing = cv2.morphologyEx(opening, cv2.MORPH_CLOSE, closing_kernel)
-        
-        # Dilate to thicken lines and merge breaks
-        dilation_kernel = np.ones((3,3), np.uint8)
-        dilated = cv2.dilate(closing, dilation_kernel, iterations=1)
-        
-        # 4. Skeletonization
-        # scikit-image skeletonize expects boolean array where True is foreground
-        skeleton = skeletonize(dilated > 0)
-        self.skeleton_img = (skeleton * 255).astype(np.uint8)
-        
+        self.skeleton_img = extract_skeleton_cv(image_path)
         return self.skeleton_img
 
     def build_graph(self):

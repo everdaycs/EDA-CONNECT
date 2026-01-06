@@ -1,3 +1,4 @@
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -6,22 +7,39 @@ venv/
 ENV/
 env/
 .env
+
+# IDEs
 .vscode/
-runs/
-*.pt
+.idea/
+
+# Project Specific
+runs/*
 !runs/detect/train_demo/weights/best.pt
-result_visualization.png
+output/
 output_netlist.txt
+skeleton_cv_debug.png
+1.png
+result_visualization.png
+
+# Data and Logs
 train.txt
 val.txt
 data.yaml
-gnn_project/processed_data/
-gnn_project/checkpoints/
-*.pth
+*.log
+
+# Model Weights and Training
 *.pt
+*.pth
 !runs/detect/train_demo/weights/best.pt
-# Exclude large model weights
-yolo11x.pt
-yolo11n.pt
-yolov8s.pt
-yolov8n.pt
+!vit_skel_project/checkpoints/best.pt
+!gnn_project/checkpoints/best_model.pth
+
+# Sub-project data
+gnn_project/processed_data/
+gnn_project/checkpoints/*
+!gnn_project/checkpoints/best_model.pth
+vit_skel_project/checkpoints/*
+!vit_skel_project/checkpoints/best.pt
+output/
+cpnt_detect_demo/det_json/
+cpnt_detect_demo/skeleton_rule/

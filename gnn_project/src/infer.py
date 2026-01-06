@@ -20,6 +20,33 @@ def infer_single_image(args):
     if img is None:
         raise ValueError("Image not found")
     H, W = img.shape[:2]
+
+    # Pre-calculate Edge Probs (Net Construction) IF we want more robust inference
+    # But this script is GNN-only inference. The prompt says: "use skeleton + det_json generate pseudo connection".
+    # Wait, infer.py IS the GNN inference. It takes nodes and builds graph. 
+    # BUT, the prompt implies "Skeleton + YOLO det -> GNN connection".
+    # In standard GNN inference (Link Prediction), we don't strictly NEED the skeleton mask IF the model is purely geometric (bbox distance).
+    # HOWEVER, if the model was trained with skeleton-guided labels, inference is just predicting links on Fully Connected (or Radius) candidate edges.
+    
+    # Wait, does the USER want GNN to take the skeleton image as INPUT feature?
+    # Prompt: "Stage 2... use skeleton + YOLO det generate pseudo connection/graph data, train & infer GNN"
+    # This usually means Skeleton is used for LABELS (Training) or Graph Construction (Heuristic).
+    # If GNN is just link prediction on nodes, it doesn't necessarily see the skeleton pixels during inference unless we add skeleton features to edge/node.
+    # The current `models.py` only takes geometric features (x, y, w, h). 
+    # So skeleton is ONLY used for Pseudo-Labels during training!
+    # AND potentially during inference to filter candidate edges if we want a hybrid approach. 
+    # BUT the prompt asks to specificy `skel_source`. 
+    # If `skel_source` is used in `infer.py`, it implies we might use it to prune edges OR just for visualization overlay?
+    # Re-reading: "4.1 Pseudo Label Generation... 4.2 GNN Training and Inference". 
+    # The GNN model itself (SAGE/GAT) only sees the graph.
+    # SO `skel_source` in inference might just be for 1) Visual Overlay 2) Optional Heuristic Pruning (if implemented).
+    # Let's keep it simple: `infer.py` builds the graph based on radius (like training) and predicts probabilities. 
+    # The skeleton is purely for training labels.
+    # Wait, "use skeleton ... to generate pseudo connection". This is usually training.
+    # BUT "infer GNN... output netlist".
+    
+    # Let's stick to the current logic: GNN predicts links based on geometry learned from skeleton-based labels.
+    # But I will add skel_source argument to `infer.py` anyway, incase we want to overlay it.
     
     # 2. Build Graph (Inference Mode - No Pseudolabels needed)
     node_features = []
@@ -135,6 +162,7 @@ if __name__ == '__main__':
     parser.add_argument('--model_type', type=str, default='SAGE')
     parser.add_argument('--r_graph', type=float, default=300.0) # Match prepare_dataset
     parser.add_argument('--p_thr', type=float, default=0.5)
+    parser.add_argument('--skel_source', type=str, default='rule', help="For visualization or future hybrid methods")
     args = parser.parse_args()
     
     infer_single_image(args)

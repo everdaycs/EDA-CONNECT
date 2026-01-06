@@ -1,0 +1,7 @@
+timm
+torch
+torchvision
+numpy
+opencv-python
+scikit-image
+tqdm
