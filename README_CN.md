@@ -75,7 +75,65 @@ Net_14: Comp_16 -- Comp_3
 Net_16: Comp_1 -- Comp_2
 ```
 
+## 🧬 弱监督 GNN 提取方案 (gnn_project)
+
+为了解决传统规则算法在应对“断线”、“复杂交叉”和“低像素质量”时的局限性，我们引入了基于**图神经网络 (GNN)** 的提取方案。该方案目前作为实验性原型存储在 `gnn_project/` 目录下。
+
+### 核心原理
+1.  **数据流**：利用现有的“元器件检测框”和“导线骨架图”，通过启发式规则自动生成**含噪声的伪标签 (Noisy Pseudo-labels)**。
+2.  **模型**：使用基于 PyTorch Geometric 的链路预测模型（如 GraphSAGE 或 GAT），学习两个元器件节点之间是否存在电气连接。
+3.  **优势**：GNN 能够学习拓扑模式，具备一定的抗噪性，可填补骨架图中的微小断裂。
+
+### 快速起步 (GNN)
+
+#### 1. 准备数据
+将检测框和骨架图转换为图数据（.pt格式）：
+```bash
+python gnn_project/src/prepare_dataset.py \
+  --data_root ./cpnt_detect_demo \
+  --output_dir ./gnn_project/processed_data
+```
+
+#### 2. 训练链路预测模型
+```bash
+python gnn_project/src/train.py \
+  --data_root ./gnn_project/processed_data \
+  --save_dir ./gnn_project/checkpoints \
+  --epochs 50
+```
+
+#### 3. 执行推理
+直接从原理图预测网表：
+```bash
+python gnn_project/src/infer.py \
+  --image ./test.png \
+  --det_json ./test_det.json \
+  --ckpt ./gnn_project/checkpoints/best_model.pth
+```
+
+---
+
 ## 未来改进方向
-*   **引脚识别**：目前仅识别元件间的连接，未来可引入关键点检测来精确定位芯片的具体引脚编号。
-*   **OCR 集成**：通过文字识别技术读取元件位号（如 R1, C10）和引脚功能。
+*   **引脚级关键点检测**：目前仅识别元件间的连接，未来可引入关键点检测来精确定位芯片的具体引脚编号。
+*   **OCR 增强**：通过文字识别技术读取元件位号（如 R1, C10）和引脚功能。
+*   **自训练 (Self-training)**：利用模型的高置信度预测结果反馈优化伪标签。
 *   **标准网表支持**：支持导出 SPICE 或 KiCad 等标准的 EDA 网表格式。
+
+## 📁 目录结构
+
+```
+EDA-Connect/
+├── cpnt_detect_demo/       # 示例数据集 (Images & Labels)
+├── gnn_project/            # [新增] GNN 弱监督网表提取原型
+│   ├── src/                # GNN 数据处理、模型与训练代码
+│   └── README.md           # GNN 模块独立文档
+├── output/                 # 运行结果输出目录
+├── runs/                   # YOLO 训练日志与权重
+├── src/                    # 源代码
+│   ├── circuit_extractor.py # 核心流水线：检测+规则连线
+│   ├── train_yolo.py       # YOLO 训练脚本
+│   └── ...
+├── data.yaml               # YOLO 数据集配置
+├── requirements.txt        # 项目依赖
+└── README_CN.md            # 项目说明文档
+```
