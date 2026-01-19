@@ -1,0 +1,64 @@
+# Data Settings
+data:
+  root: "/home/kaga/Desktop/EDA-Connect/cpnt_detect_demo"
+  images_dir: "images"
+  labels_dir: "labels"
+  output_dir: "/home/kaga/Desktop/EDA-Connect/frcnn_project/outputs"
+  split_file: "/home/kaga/Desktop/EDA-Connect/frcnn_project/data_split.json"
+  num_classes: 91  # Background (1) + Max Class ID (90)
+  input_size: [1024, 1024] # Resize input to this, or null to keep original
+
+# Model Architecture Settings
+model:
+  backbone: "resnext101_32x8d" # Options: resnet50_fpn, resnet101_fpn, resnext101_32x8d, wide_resnet101_2
+  pretrained: true
+  trainable_backbone_layers: 3
+  
+  # Anchor Generator (Optimized for both small and large components)
+  anchor_sizes: [[16, 32, 64, 128, 256]]
+  aspect_ratios: [[0.5, 1.0, 2.0]] # Standard Ratios
+  
+  # RPN Settings (Balanced Recall/Precision)
+  rpn_pre_nms_top_n_train: 2000
+  rpn_post_nms_top_n_train: 1000
+  rpn_pre_nms_top_n_test: 1000
+  rpn_post_nms_top_n_test: 1000
+  rpn_nms_thresh: 0.7      # Lower threshold to reduce duplicates
+  rpn_fg_iou_thresh: 0.7
+  rpn_bg_iou_thresh: 0.3
+
+  # ROI Heads
+  box_score_thresh: 0.05    # Low threshold for high recall inference
+  box_nms_thresh: 0.6       # NMS threshold
+  box_detections_per_img: 500
+
+# Training Settings
+train:
+  seed: 42
+  device: "auto" # auto, cuda, mps, cpu
+  epochs: 30
+  batch_size: 2
+  num_workers: 4
+  
+  # Optimizer
+  optimizer: "sgd" # sgd or adamw
+  lr: 0.005
+  momentum: 0.9
+  weight_decay: 0.0005
+  
+  # Scheduler
+  lr_scheduler: "step"
+  lr_step_size: 10
+  lr_gamma: 0.1
+  
+  save_interval: 5 # Save checkpoint every N epochs
+  eval_interval: 1 # Run eval every N epochs
+  print_freq: 50
+
+# Inference Settings
+inference:
+  tiling:
+    enabled: true
+    tile_size: [800, 800]
+    overlap: 0.25
+    merge_iou_thresh: 0.45

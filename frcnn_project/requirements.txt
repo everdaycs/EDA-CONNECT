@@ -1,0 +1,9 @@
+torch>=2.0.0
+torchvision>=0.15.0
+numpy
+pyyaml
+tqdm
+matplotlib
+opencv-python
+pycocotools
+scipy
