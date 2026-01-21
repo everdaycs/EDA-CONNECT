@@ -1,0 +1,34 @@
+# Config for Component-only Connectivity Prediction
+
+data:
+  image_dir: "/home/kaga/Desktop/EDA-Connect/joint_training_data/images"
+  cpnt_label_dir: "/home/kaga/Desktop/EDA-Connect/joint_training_data/cpnt_labels"
+  wire_label_dir: "/home/kaga/Desktop/EDA-Connect/joint_training_data/line_labels"
+  edge_cache_dir: "/home/kaga/Desktop/EDA-Connect/frcnn_project/outputs/edge_cache"
+  
+  # Weak Supervision Parameters
+  weak_label:
+    border_expand_out: 6
+    border_expand_in: 2
+    wire_dilate_kernel: 3
+    contact_threshold: 10 # Pixels
+    
+  # Edge Generation
+  edge_gen:
+    k_neighbors: 12
+    max_radius: 0.4 # Normalized to image diag or width
+    negative_ratio: 3 # Hard negatives per positive
+    
+model:
+  backbone: "resnet18" # simple cnn
+  pretrained: true
+  input_size: [128, 64] # W, H of corridor patch
+  embedding_dim: 128
+  hidden_dim: 64
+  
+train:
+  batch_size: 32
+  epochs: 20
+  lr: 0.0001
+  pos_weight: 2.0 # Weight for positive class
+  save_dir: "/home/kaga/Desktop/EDA-Connect/frcnn_project/outputs/checkpoints_edge"

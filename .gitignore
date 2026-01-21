@@ -41,5 +41,7 @@ gnn_project/checkpoints/*
 vit_skel_project/checkpoints/*
 !vit_skel_project/checkpoints/best.pt
 output/
-cpnt_detect_demo/det_json/
-cpnt_detect_demo/skeleton_rule/
+cpnt_detect_demo/
+line_seg_demo_20260114/
+frcnn_project/outputs/
+joint_training_data/

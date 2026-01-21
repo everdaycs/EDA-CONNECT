@@ -1,0 +1,7 @@
+# Wire Detection Dataset Config
+path: /home/kaga/Desktop/EDA-Connect/line_seg_demo_20260114  # dataset root dir
+train: train_wire.txt  # train images (relative to 'path') 
+val: val_wire.txt      # val images (relative to 'path')
+
+names:
+  0: wire
